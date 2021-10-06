@@ -1,0 +1,72 @@
+{
+	"info": {
+		"_postman_id": "3777b535-f805-4504-858c-f3618d269820",
+		"name": "Totemfi Get constract transactions",
+		"description": "Get all transactions of contracts",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetEventsLogs",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"address\": \"0x7be8076f4ea4a4ad08075c2508e481d6c946d12b\",\n    \"from_block\": 13366284,\n    \"to_block\": 13366285\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/contracts/events/logs",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"contracts",
+						"events",
+						"logs"
+					]
+				},
+				"description": "Get all envents log of a constract"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "2630ad8d-420f-4ee9-bc33-00c8c0f41bad",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "099297fb-e0c8-41a7-b94c-8125be6c8250",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "e96cb332-8e2c-47b7-a3fc-ab5fccd95444",
+			"key": "base_url",
+			"value": "http://127.0.0.1:6979"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
